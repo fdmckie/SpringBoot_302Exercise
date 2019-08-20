@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Todo List(s)</h1>
+<br />
+<br />
+<a href="/add">Add a Todo Task</a><br />
+<div th:each="todo : ${todos}">
+    <h4 th:inline="text">[[${todo.taskName}]] due by [[${todo.dueDate}]] with a priority of [[${todo.taskPriority}]]</h4>
+<!--    <p th:text="${job.description}"></p>-->
+</div>
+
+</body>
+</html>
+
